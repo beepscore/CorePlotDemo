@@ -24,6 +24,7 @@
 		DE2CE89B186153C40095DE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE87A186153C30095DE59 /* UIKit.framework */; };
 		DE2CE8A3186153C40095DE59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE8A1186153C40095DE59 /* InfoPlist.strings */; };
 		DE2CE8A5186153C40095DE59 /* CorePlotDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */; };
+		DEBE8E9618626C0D001EECAE /* CPDScatterPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */; };
 		DEDB31DF18618F4B006CF7CA /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */; };
 		DEDB46851861943500680830 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB46841861943500680830 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		DE2CE8A0186153C40095DE59 /* CorePlotDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CorePlotDemoTests-Info.plist"; sourceTree = "<group>"; };
 		DE2CE8A2186153C40095DE59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorePlotDemoTests.m; sourceTree = "<group>"; };
+		DEBE8E9418626C0D001EECAE /* CPDScatterPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDScatterPlotViewController.h; sourceTree = "<group>"; };
+		DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDScatterPlotViewController.m; sourceTree = "<group>"; };
 		DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "core-plot/build/Debug-iphoneos/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		DEDB46841861943500680830 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -148,6 +151,8 @@
 				DE2CE88C186153C30095DE59 /* CPDPieChartViewController.m */,
 				DE2CE88E186153C30095DE59 /* CPDBarGraphViewController.h */,
 				DE2CE88F186153C30095DE59 /* CPDBarGraphViewController.m */,
+				DEBE8E9418626C0D001EECAE /* CPDScatterPlotViewController.h */,
+				DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */,
 				DE2CE891186153C30095DE59 /* Images.xcassets */,
 				DE2CE87D186153C30095DE59 /* Supporting Files */,
 			);
@@ -284,6 +289,7 @@
 				DE1757B01861979700B1C3B3 /* CPDConstants.m in Sources */,
 				DE1757B11861979700B1C3B3 /* CPDStockPriceStore.m in Sources */,
 				DE2CE887186153C30095DE59 /* AppDelegate.m in Sources */,
+				DEBE8E9618626C0D001EECAE /* CPDScatterPlotViewController.m in Sources */,
 				DE2CE88D186153C30095DE59 /* CPDPieChartViewController.m in Sources */,
 				DE2CE883186153C30095DE59 /* main.m in Sources */,
 			);
