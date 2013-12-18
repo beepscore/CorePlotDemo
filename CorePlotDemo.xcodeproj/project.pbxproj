@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1757B01861979700B1C3B3 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1757AD1861979700B1C3B3 /* CPDConstants.m */; };
+		DE1757B11861979700B1C3B3 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1757AF1861979700B1C3B3 /* CPDStockPriceStore.m */; };
 		DE2CE877186153C30095DE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE876186153C30095DE59 /* Foundation.framework */; };
 		DE2CE879186153C30095DE59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE878186153C30095DE59 /* CoreGraphics.framework */; };
 		DE2CE87B186153C30095DE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE87A186153C30095DE59 /* UIKit.framework */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE1757AC1861979700B1C3B3 /* CPDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDConstants.h; sourceTree = "<group>"; };
+		DE1757AD1861979700B1C3B3 /* CPDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDConstants.m; sourceTree = "<group>"; };
+		DE1757AE1861979700B1C3B3 /* CPDStockPriceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDStockPriceStore.h; sourceTree = "<group>"; };
+		DE1757AF1861979700B1C3B3 /* CPDStockPriceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDStockPriceStore.m; sourceTree = "<group>"; };
 		DE2CE873186153C30095DE59 /* CorePlotDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorePlotDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2CE876186153C30095DE59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE2CE878186153C30095DE59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,9 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE1757AB1861979700B1C3B3 /* Starter Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE1757AC1861979700B1C3B3 /* CPDConstants.h */,
+				DE1757AD1861979700B1C3B3 /* CPDConstants.m */,
+				DE1757AE1861979700B1C3B3 /* CPDStockPriceStore.h */,
+				DE1757AF1861979700B1C3B3 /* CPDStockPriceStore.m */,
+			);
+			path = "Starter Files";
+			sourceTree = "<group>";
+		};
 		DE2CE86A186153C30095DE59 = {
 			isa = PBXGroup;
 			children = (
+				DE1757AB1861979700B1C3B3 /* Starter Files */,
 				DE2CE87C186153C30095DE59 /* CorePlotDemo */,
 				DE2CE89E186153C40095DE59 /* CorePlotDemoTests */,
 				DE2CE875186153C30095DE59 /* Frameworks */,
@@ -263,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2CE890186153C30095DE59 /* SecondViewController.m in Sources */,
+				DE1757B01861979700B1C3B3 /* CPDConstants.m in Sources */,
+				DE1757B11861979700B1C3B3 /* CPDStockPriceStore.m in Sources */,
 				DE2CE887186153C30095DE59 /* AppDelegate.m in Sources */,
 				DE2CE88D186153C30095DE59 /* FirstViewController.m in Sources */,
 				DE2CE883186153C30095DE59 /* main.m in Sources */,
