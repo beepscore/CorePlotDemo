@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  CPDPieChartViewController.h
 //  CorePlotDemo
 //
 //  Created by Steve Baker on 12/17/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface CPDPieChartViewController : UIViewController
 
 @end
