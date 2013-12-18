@@ -17,7 +17,7 @@
 		DE2CE887186153C30095DE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE886186153C30095DE59 /* AppDelegate.m */; };
 		DE2CE88A186153C30095DE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE888186153C30095DE59 /* Main.storyboard */; };
 		DE2CE88D186153C30095DE59 /* CPDPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE88C186153C30095DE59 /* CPDPieChartViewController.m */; };
-		DE2CE890186153C30095DE59 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE88F186153C30095DE59 /* SecondViewController.m */; };
+		DE2CE890186153C30095DE59 /* CPDBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE88F186153C30095DE59 /* CPDBarGraphViewController.m */; };
 		DE2CE892186153C30095DE59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE891186153C30095DE59 /* Images.xcassets */; };
 		DE2CE899186153C30095DE59 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE898186153C30095DE59 /* XCTest.framework */; };
 		DE2CE89A186153C40095DE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE876186153C30095DE59 /* Foundation.framework */; };
@@ -56,8 +56,8 @@
 		DE2CE889186153C30095DE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE2CE88B186153C30095DE59 /* CPDPieChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPDPieChartViewController.h; sourceTree = "<group>"; };
 		DE2CE88C186153C30095DE59 /* CPDPieChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPDPieChartViewController.m; sourceTree = "<group>"; };
-		DE2CE88E186153C30095DE59 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		DE2CE88F186153C30095DE59 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DE2CE88E186153C30095DE59 /* CPDBarGraphViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPDBarGraphViewController.h; sourceTree = "<group>"; };
+		DE2CE88F186153C30095DE59 /* CPDBarGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPDBarGraphViewController.m; sourceTree = "<group>"; };
 		DE2CE891186153C30095DE59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE2CE897186153C30095DE59 /* CorePlotDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorePlotDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2CE898186153C30095DE59 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -146,8 +146,8 @@
 				DE2CE888186153C30095DE59 /* Main.storyboard */,
 				DE2CE88B186153C30095DE59 /* CPDPieChartViewController.h */,
 				DE2CE88C186153C30095DE59 /* CPDPieChartViewController.m */,
-				DE2CE88E186153C30095DE59 /* SecondViewController.h */,
-				DE2CE88F186153C30095DE59 /* SecondViewController.m */,
+				DE2CE88E186153C30095DE59 /* CPDBarGraphViewController.h */,
+				DE2CE88F186153C30095DE59 /* CPDBarGraphViewController.m */,
 				DE2CE891186153C30095DE59 /* Images.xcassets */,
 				DE2CE87D186153C30095DE59 /* Supporting Files */,
 			);
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE2CE890186153C30095DE59 /* SecondViewController.m in Sources */,
+				DE2CE890186153C30095DE59 /* CPDBarGraphViewController.m in Sources */,
 				DE1757B01861979700B1C3B3 /* CPDConstants.m in Sources */,
 				DE1757B11861979700B1C3B3 /* CPDStockPriceStore.m in Sources */,
 				DE2CE887186153C30095DE59 /* AppDelegate.m in Sources */,
