@@ -22,6 +22,7 @@
 		DE2CE89B186153C40095DE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE87A186153C30095DE59 /* UIKit.framework */; };
 		DE2CE8A3186153C40095DE59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE8A1186153C40095DE59 /* InfoPlist.strings */; };
 		DE2CE8A5186153C40095DE59 /* CorePlotDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */; };
+		DEDB31DF18618F4B006CF7CA /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DE2CE8A0186153C40095DE59 /* CorePlotDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CorePlotDemoTests-Info.plist"; sourceTree = "<group>"; };
 		DE2CE8A2186153C40095DE59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorePlotDemoTests.m; sourceTree = "<group>"; };
+		DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libCorePlot-CocoaTouch.a"; path = "core-plot/framework/../build/Debug-iphoneos/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDB31DF18618F4B006CF7CA /* libCorePlot-CocoaTouch.a in Frameworks */,
 				DE2CE879186153C30095DE59 /* CoreGraphics.framework in Frameworks */,
 				DE2CE87B186153C30095DE59 /* UIKit.framework in Frameworks */,
 				DE2CE877186153C30095DE59 /* Foundation.framework in Frameworks */,
@@ -104,6 +107,7 @@
 		DE2CE875186153C30095DE59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */,
 				DE2CE876186153C30095DE59 /* Foundation.framework */,
 				DE2CE878186153C30095DE59 /* CoreGraphics.framework */,
 				DE2CE87A186153C30095DE59 /* UIKit.framework */,
@@ -466,6 +470,7 @@
 				DE2CE8AA186153C40095DE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE2CE8AB186153C40095DE59 /* Build configuration list for PBXNativeTarget "CorePlotDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +479,7 @@
 				DE2CE8AD186153C40095DE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
