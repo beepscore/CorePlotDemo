@@ -13,4 +13,6 @@
 
 @interface CPDScatterPlotViewController : UIViewController <CPTPlotDataSource>
 
+@property (nonatomic, strong) CPTGraphHostingView *hostView;
+
 @end
