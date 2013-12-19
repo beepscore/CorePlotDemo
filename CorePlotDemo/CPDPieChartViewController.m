@@ -62,18 +62,15 @@
 }
 
 -(void)configureHost {
-    // 1 - Set up view frame
-    CGRect parentRect = self.view.bounds;
-    parentRect = CGRectMake(60, 80, 400, 160);
 
-    // 2 - Create host view
     // I couldn't instantiate CPTGraphHostingView in storyboard,
     // I think because class doesn't use ARC and can't mix.
+    // parentRect will place view approximately as desired
+    // then use auto layout constraints to adjust view
+    CGRect parentRect = CGRectMake(0, 80, 400, 160);
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc]
                      initWithFrame:parentRect];
     
-    self.hostView.allowPinchScaling = NO;
-
     // http://commandshift.co.uk/blog/2013/01/31/visual-format-language-for-autolayout/
     [self.hostView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.hostView];
@@ -102,6 +99,7 @@
 
     [self.view addConstraints:verticalConstraints];
 
+    self.hostView.allowPinchScaling = NO;
 }
 
 -(void)configureGraph {
