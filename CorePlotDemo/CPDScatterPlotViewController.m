@@ -51,6 +51,7 @@
 
 -(void)configureHost {
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:self.view.bounds];
+    // allowPinchScaling default is YES, explicitly set it for clarity
     self.hostView.allowPinchScaling = YES;
     [self.view addSubview:self.hostView];
 }
