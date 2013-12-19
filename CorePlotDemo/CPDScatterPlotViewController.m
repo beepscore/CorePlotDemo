@@ -159,11 +159,17 @@
     return [[[CPDStockPriceStore sharedInstance] datesInMonth] count];
 }
 
+/**
+ @param field specifies x or y
+ **/
 -(NSNumber *)numberForPlot:(CPTPlot *)plot
                      field:(NSUInteger)fieldEnum
                recordIndex:(NSUInteger)index {
+
     NSInteger valueCount = [[[CPDStockPriceStore sharedInstance] datesInMonth] count];
+
     switch (fieldEnum) {
+
         case CPTScatterPlotFieldX:
             if (index < valueCount) {
                 return [NSNumber numberWithUnsignedInteger:index];
