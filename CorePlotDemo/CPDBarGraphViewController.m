@@ -183,16 +183,35 @@ CGFloat const CPDBarInitialX = 0.25f;
 }
 
 -(void)hideAnnotation:(CPTGraph *)graph {
+    if ((graph.plotAreaFrame.plotArea) && (self.priceAnnotation)) {
+        [graph.plotAreaFrame.plotArea removeAnnotation:self.priceAnnotation];
+        self.priceAnnotation = nil;
+    }
 }
 
 #pragma mark - IBActions
 -(IBAction)aaplSwitched:(id)sender {
+    BOOL on = [((UISwitch *) sender) isOn];
+    if (!on) {
+        [self hideAnnotation:self.aaplPlot.graph];
+    }
+    [self.aaplPlot setHidden:!on];
 }
 
 -(IBAction)googSwitched:(id)sender {
+    BOOL on = [((UISwitch *) sender) isOn];
+    if (!on) {
+        [self hideAnnotation:self.googPlot.graph];
+    }
+    [self.googPlot setHidden:!on];
 }
 
 -(IBAction)msftSwitched:(id)sender {
+    BOOL on = [((UISwitch *) sender) isOn];
+    if (!on) {
+        [self hideAnnotation:self.msftPlot.graph];
+    }
+    [self.msftPlot setHidden:!on];
 }
 
 #pragma mark - CPTPlotDataSource methods
