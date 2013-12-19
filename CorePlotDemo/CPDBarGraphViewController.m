@@ -7,7 +7,6 @@
 //
 
 #import "CPDBarGraphViewController.h"
-#import "CorePlot-CocoaTouch.h"
 #import "CPDConstants.h"
 #import "CPDStockPriceStore.h"
 
@@ -27,6 +26,21 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - CPTPlotDataSource methods
+-(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
+    return 0;
+}
+
+-(NSNumber *)numberForPlot:(CPTPlot *)plot
+                     field:(NSUInteger)fieldEnum
+               recordIndex:(NSUInteger)index {
+    return [NSDecimalNumber numberWithUnsignedInteger:index];
+}
+
+#pragma mark - CPTBarPlotDelegate methods
+-(void)barPlot:(CPTBarPlot *)plot barWasSelectedAtRecordIndex:(NSUInteger)index {
 }
 
 @end
