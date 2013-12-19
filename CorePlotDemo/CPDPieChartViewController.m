@@ -130,15 +130,44 @@
 
 #pragma mark - CPTPlotDataSource methods
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
-    return 0;
+    return [[[CPDStockPriceStore sharedInstance] tickerSymbols] count];
 }
 
--(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
-    return 0;
+-(NSNumber *)numberForPlot:(CPTPlot *)plot
+                     field:(NSUInteger)fieldEnum
+               recordIndex:(NSUInteger)index {
+    if (CPTPieChartFieldSliceWidth == fieldEnum)
+    {
+        return [[[CPDStockPriceStore sharedInstance] dailyPortfolioPrices]
+                objectAtIndex:index];
+    }
+    return [NSDecimalNumber zero];
 }
 
--(CPTLayer *)dataLabelForPlot:(CPTPlot *)plot recordIndex:(NSUInteger)index {
-    return nil;
+/**
+ @returns CPTLayer, similar to a Core Animation layer.
+ **/
+-(CPTLayer *)dataLabelForPlot:(CPTPlot *)plot
+                  recordIndex:(NSUInteger)index {
+
+    // 1 - Define label text style
+    static CPTMutableTextStyle *labelText = nil;
+    if (!labelText) {
+        labelText= [[CPTMutableTextStyle alloc] init];
+        labelText.color = [CPTColor grayColor];
+    }
+    // 2 - Calculate portfolio total value
+    NSDecimalNumber *portfolioSum = [NSDecimalNumber zero];
+    for (NSDecimalNumber *price in [[CPDStockPriceStore sharedInstance] dailyPortfolioPrices]) {
+        portfolioSum = [portfolioSum decimalNumberByAdding:price];
+    }
+    // 3 - Calculate percentage value
+    NSDecimalNumber *price = [[[CPDStockPriceStore sharedInstance] dailyPortfolioPrices] objectAtIndex:index];
+    NSDecimalNumber *percent = [price decimalNumberByDividingBy:portfolioSum];
+    // 4 - Set up display label
+    NSString *labelValue = [NSString stringWithFormat:@"$%0.2f USD (%0.1f %%)", [price floatValue], ([percent floatValue] * 100.0f)];
+    // 5 - Create and return layer with label text
+    return [[CPTTextLayer alloc] initWithText:labelValue style:labelText];
 }
 
 -(NSString *)legendTitleForPieChart:(CPTPieChart *)pieChart recordIndex:(NSUInteger)index {
