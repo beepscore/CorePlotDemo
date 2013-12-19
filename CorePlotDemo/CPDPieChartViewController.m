@@ -71,6 +71,33 @@
 }
 
 -(void)configureGraph {
+
+    // 1 - Create and initialize graph
+    CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:self.hostView.bounds];
+
+    self.hostView.hostedGraph = graph;
+    graph.paddingLeft = 0.0f;
+    graph.paddingTop = 0.0f;
+    graph.paddingRight = 0.0f;
+    graph.paddingBottom = 0.0f;
+    graph.axisSet = nil;
+
+    // 2 - Set up text style
+    CPTMutableTextStyle *textStyle = [CPTMutableTextStyle textStyle];
+    textStyle.color = [CPTColor grayColor];
+    textStyle.fontName = @"Helvetica-Bold";
+    textStyle.fontSize = 16.0f;
+
+    // 3 - Configure title
+    NSString *title = @"Portfolio Prices: May 1, 2012";
+    graph.title = title;
+    graph.titleTextStyle = textStyle;
+    graph.titlePlotAreaFrameAnchor = CPTRectAnchorTop;
+    graph.titleDisplacement = CGPointMake(0.0f, -12.0f);
+
+    // 4 - Set theme
+    self.selectedTheme = [CPTTheme themeNamed:kCPTPlainWhiteTheme];
+    [graph applyTheme:self.selectedTheme];
 }
 
 -(void)configureChart {
