@@ -66,10 +66,11 @@
     // 1 - Set up view frame
     CGRect parentRect = self.view.bounds;
     CGSize toolbarSize = self.toolbar.bounds.size;
+    // put parentRect below ios7 status bar and toolbar
     parentRect = CGRectMake(parentRect.origin.x,
-                            (parentRect.origin.y + toolbarSize.height),
+                            (parentRect.origin.y + toolbarSize.height + 20),
                             parentRect.size.width,
-                            (parentRect.size.height - toolbarSize.height));
+                            (parentRect.size.height - toolbarSize.height - 40));
     // 2 - Create host view
     // I couldn't instantiate CPTGraphHostingView in storyboard,
     // I think because class doesn't use ARC and can't mix.
