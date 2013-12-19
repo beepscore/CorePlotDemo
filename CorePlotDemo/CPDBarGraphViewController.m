@@ -44,10 +44,51 @@ CGFloat const CPDBarInitialX = 0.25f;
 
 #pragma mark - Chart behavior
 -(void)initPlot {
-    self.hostView.allowPinchScaling = NO;
+    [self configureHost];
     [self configureGraph];
     [self configurePlots];
     [self configureAxes];
+}
+
+-(void)configureHost {
+
+    // I couldn't instantiate CPTGraphHostingView in storyboard,
+    // I think because class doesn't use ARC and can't mix.
+    // parentRect will place view approximately as desired
+    // then use auto layout constraints to adjust view
+    CGRect parentRect = CGRectMake(0, 80, 400, 160);
+    self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc]
+                     initWithFrame:parentRect];
+    
+    // http://commandshift.co.uk/blog/2013/01/31/visual-format-language-for-autolayout/
+    [self.hostView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:self.hostView];
+
+    NSNumber *tabBarHeight = [NSNumber
+                              numberWithInt:self.tabBarController.tabBar.bounds.size.height];
+    NSDictionary *metrics = @{@"tabBarHeight": tabBarHeight,
+                              @"switchHeight": @50};
+
+    NSDictionary *viewsDictionary = @{@"view": self.view,
+                                      @"hostView": self.hostView};
+
+    NSArray *horizontalConstraints = [NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"|[hostView]|"
+                                      options:NSLayoutFormatAlignAllCenterX
+                                      metrics:metrics
+                                      views:viewsDictionary];
+
+    [self.view addConstraints:horizontalConstraints];
+
+    NSArray *verticalConstraints = [NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"V:|-switchHeight-[hostView]-tabBarHeight-|"
+                                      options:NSLayoutFormatAlignAllCenterX
+                                      metrics:metrics
+                                      views:viewsDictionary];
+
+    [self.view addConstraints:verticalConstraints];
+
+    self.hostView.allowPinchScaling = NO;
 }
 
 -(void)configureGraph {
