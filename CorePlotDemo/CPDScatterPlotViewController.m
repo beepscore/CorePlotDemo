@@ -156,10 +156,30 @@
 
 #pragma mark - CPTPlotDataSource methods
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
-    return 0;
+    return [[[CPDStockPriceStore sharedInstance] datesInMonth] count];
 }
 
--(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
+-(NSNumber *)numberForPlot:(CPTPlot *)plot
+                     field:(NSUInteger)fieldEnum
+               recordIndex:(NSUInteger)index {
+    NSInteger valueCount = [[[CPDStockPriceStore sharedInstance] datesInMonth] count];
+    switch (fieldEnum) {
+        case CPTScatterPlotFieldX:
+            if (index < valueCount) {
+                return [NSNumber numberWithUnsignedInteger:index];
+            }
+            break;
+            
+        case CPTScatterPlotFieldY:
+            if ([plot.identifier isEqual:CPDTickerSymbolAAPL] == YES) {
+                return [[[CPDStockPriceStore sharedInstance] monthlyPrices:CPDTickerSymbolAAPL] objectAtIndex:index];
+            } else if ([plot.identifier isEqual:CPDTickerSymbolGOOG] == YES) {
+                return [[[CPDStockPriceStore sharedInstance] monthlyPrices:CPDTickerSymbolGOOG] objectAtIndex:index];
+            } else if ([plot.identifier isEqual:CPDTickerSymbolMSFT] == YES) {
+                return [[[CPDStockPriceStore sharedInstance] monthlyPrices:CPDTickerSymbolMSFT] objectAtIndex:index];
+            }
+            break;
+    }
     return [NSDecimalNumber zero];
 }
 
