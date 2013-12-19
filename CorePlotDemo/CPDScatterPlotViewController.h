@@ -11,6 +11,6 @@
 #import "CPDConstants.h"
 #import "CPDStockPriceStore.h"
 
-@interface CPDScatterPlotViewController : UIViewController
+@interface CPDScatterPlotViewController : UIViewController <CPTPlotDataSource>
 
 @end

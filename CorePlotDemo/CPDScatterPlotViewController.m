@@ -35,4 +35,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - CPTPlotDataSource methods
+-(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
+    return 0;
+}
+
+-(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index {
+    return [NSDecimalNumber zero];
+}
+
 @end
