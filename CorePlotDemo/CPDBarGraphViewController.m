@@ -99,6 +99,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     self.hostView.hostedGraph = graph;
     
     // 2 - Configure the graph
+    // left and bottom padding make room for axes
     [graph applyTheme:[CPTTheme themeNamed:kCPTPlainBlackTheme]];
     graph.paddingBottom = 30.0f;
     graph.paddingLeft  = 30.0f;
@@ -119,6 +120,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     graph.titleDisplacement = CGPointMake(0.0f, -16.0f);
     
     // 5 - Set up plot space
+    // map plot coordinates to screen coordinates
     CGFloat xMin = 0.0f;
     CGFloat xMax = [[[CPDStockPriceStore sharedInstance] datesInWeek] count];
     CGFloat yMin = 0.0f;
@@ -151,6 +153,7 @@ CGFloat const CPDBarInitialX = 0.25f;
         plot.delegate = self;
         plot.barWidth = CPTDecimalFromDouble(CPDBarWidth);
         plot.barOffset = CPTDecimalFromDouble(barX);
+        // lineStyle is bar border
         plot.lineStyle = barLineStyle;
         [graph addPlot:plot toPlotSpace:graph.defaultPlotSpace];
         barX += CPDBarWidth;
