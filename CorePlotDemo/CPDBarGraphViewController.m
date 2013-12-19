@@ -175,12 +175,22 @@ CGFloat const CPDBarInitialX = 0.25f;
 
 #pragma mark - CPTPlotDataSource methods
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot {
-    return 0;
+    return [[[CPDStockPriceStore sharedInstance] datesInWeek] count];
 }
 
 -(NSNumber *)numberForPlot:(CPTPlot *)plot
                      field:(NSUInteger)fieldEnum
                recordIndex:(NSUInteger)index {
+    
+    if ((fieldEnum == CPTBarPlotFieldBarTip) && (index < [[[CPDStockPriceStore sharedInstance] datesInWeek] count])) {
+        if ([plot.identifier isEqual:CPDTickerSymbolAAPL]) {
+            return [[[CPDStockPriceStore sharedInstance] weeklyPrices:CPDTickerSymbolAAPL] objectAtIndex:index];
+        } else if ([plot.identifier isEqual:CPDTickerSymbolGOOG]) {
+            return [[[CPDStockPriceStore sharedInstance] weeklyPrices:CPDTickerSymbolGOOG] objectAtIndex:index];
+        } else if ([plot.identifier isEqual:CPDTickerSymbolMSFT]) {
+            return [[[CPDStockPriceStore sharedInstance] weeklyPrices:CPDTickerSymbolMSFT] objectAtIndex:index];
+        }
+    }
     return [NSDecimalNumber numberWithUnsignedInteger:index];
 }
 
