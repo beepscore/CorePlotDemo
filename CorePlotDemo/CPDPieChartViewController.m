@@ -62,22 +62,46 @@
 }
 
 -(void)configureHost {
-    // TODO: Consider using autolayout to size the view
     // 1 - Set up view frame
     CGRect parentRect = self.view.bounds;
-    CGSize toolbarSize = self.toolbar.bounds.size;
-    // put parentRect below ios7 status bar and toolbar
-    parentRect = CGRectMake(parentRect.origin.x,
-                            (parentRect.origin.y + toolbarSize.height + 20),
-                            parentRect.size.width,
-                            (parentRect.size.height - toolbarSize.height - 40));
+    parentRect = CGRectMake(60, 80, 400, 160);
+
     // 2 - Create host view
     // I couldn't instantiate CPTGraphHostingView in storyboard,
     // I think because class doesn't use ARC and can't mix.
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc]
                      initWithFrame:parentRect];
+    
     self.hostView.allowPinchScaling = NO;
+
+    // http://commandshift.co.uk/blog/2013/01/31/visual-format-language-for-autolayout/
+    [self.hostView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.hostView];
+
+    NSNumber *tabBarHeight = [NSNumber
+                              numberWithInt:self.tabBarController.tabBar.bounds.size.height];
+    NSDictionary *metrics = @{@"tabBarHeight": tabBarHeight};
+
+    NSDictionary *viewsDictionary = @{@"view": self.view,
+                                      @"toolbar": self.toolbar,
+                                      @"hostView": self.hostView};
+
+    NSArray *horizontalConstraints = [NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"|[hostView]|"
+                                      options:NSLayoutFormatAlignAllCenterX
+                                      metrics:metrics
+                                      views:viewsDictionary];
+
+    [self.view addConstraints:horizontalConstraints];
+
+    NSArray *verticalConstraints = [NSLayoutConstraint
+                                      constraintsWithVisualFormat:@"V:|-20-[toolbar]-[hostView]-tabBarHeight-|"
+                                      options:NSLayoutFormatAlignAllCenterX
+                                      metrics:metrics
+                                      views:viewsDictionary];
+
+    [self.view addConstraints:verticalConstraints];
+
 }
 
 -(void)configureGraph {
