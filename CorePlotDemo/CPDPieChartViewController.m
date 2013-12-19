@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *themeButton;
+@property (nonatomic, strong) CPTGraphHostingView *hostView;
+@property (nonatomic, strong) CPTTheme *selectedTheme;
 
 -(IBAction)themeTapped:(id)sender;
 
@@ -27,6 +29,13 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+#pragma mark - UIViewController lifecycle methods
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // The plot is initialized here, since the view bounds have not transformed for landscape until now
+    [self initPlot];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -35,6 +44,26 @@
 
 #pragma mark - IBActions
 -(IBAction)themeTapped:(id)sender {
+}
+
+#pragma mark - Chart behavior
+-(void)initPlot {
+    [self configureHost];
+    [self configureGraph];
+    [self configureChart];
+    [self configureLegend];
+}
+
+-(void)configureHost {
+}
+
+-(void)configureGraph {
+}
+
+-(void)configureChart {
+}
+
+-(void)configureLegend {
 }
 
 #pragma mark - CPTPlotDataSource methods
