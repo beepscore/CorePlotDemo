@@ -87,7 +87,7 @@ CGFloat const CPDBarInitialX = 0.25f;
                                       views:viewsDictionary];
 
     [self.view addConstraints:verticalConstraints];
-
+    
     self.hostView.allowPinchScaling = NO;
 }
 
