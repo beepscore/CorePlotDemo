@@ -14,6 +14,7 @@
 
 @implementation CPDScatterPlotViewController
 
+#pragma mark - UIViewController lifecycle methods
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,6 +34,31 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self initPlot];
+}
+
+#pragma mark - Chart behavior
+-(void)initPlot {
+    [self configureHost];
+    [self configureGraph];
+    [self configurePlots];
+    [self configureAxes];
+}
+
+-(void)configureHost {
+}
+
+-(void)configureGraph {
+}
+
+-(void)configurePlots {
+}
+
+-(void)configureAxes {
 }
 
 #pragma mark - CPTPlotDataSource methods
