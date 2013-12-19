@@ -158,6 +158,28 @@ CGFloat const CPDBarInitialX = 0.25f;
 }
 
 -(void)configureAxes {
+    // 1 - Configure styles
+    CPTMutableTextStyle *axisTitleStyle = [CPTMutableTextStyle textStyle];
+    axisTitleStyle.color = [CPTColor whiteColor];
+    axisTitleStyle.fontName = @"Helvetica-Bold";
+    axisTitleStyle.fontSize = 12.0f;
+    CPTMutableLineStyle *axisLineStyle = [CPTMutableLineStyle lineStyle];
+    axisLineStyle.lineWidth = 2.0f;
+    axisLineStyle.lineColor = [[CPTColor whiteColor] colorWithAlphaComponent:1];
+    // 2 - Get the graph's axis set
+    CPTXYAxisSet *axisSet = (CPTXYAxisSet *) self.hostView.hostedGraph.axisSet;
+    // 3 - Configure the x-axis
+    axisSet.xAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
+    axisSet.xAxis.title = @"Days of Week (Mon - Fri)";
+    axisSet.xAxis.titleTextStyle = axisTitleStyle;
+    axisSet.xAxis.titleOffset = 10.0f;
+    axisSet.xAxis.axisLineStyle = axisLineStyle;
+    // 4 - Configure the y-axis
+    axisSet.yAxis.labelingPolicy = CPTAxisLabelingPolicyNone;
+    axisSet.yAxis.title = @"Price";
+    axisSet.yAxis.titleTextStyle = axisTitleStyle;
+    axisSet.yAxis.titleOffset = 5.0f;
+    axisSet.yAxis.axisLineStyle = axisLineStyle;
 }
 
 -(void)hideAnnotation:(CPTGraph *)graph {
