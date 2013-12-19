@@ -71,6 +71,8 @@
                             parentRect.size.width,
                             (parentRect.size.height - toolbarSize.height));
     // 2 - Create host view
+    // I couldn't instantiate CPTGraphHostingView in storyboard,
+    // I think because class doesn't use ARC and can't mix.
     self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc]
                      initWithFrame:parentRect];
     self.hostView.allowPinchScaling = NO;
