@@ -10,6 +10,11 @@
 
 @interface CPDPieChartViewController ()
 
+@property (nonatomic, strong) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *themeButton;
+
+-(IBAction)themeTapped:(id)sender;
+
 @end
 
 @implementation CPDPieChartViewController
@@ -24,6 +29,10 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - IBActions
+-(IBAction)themeTapped:(id)sender {
 }
 
 @end
