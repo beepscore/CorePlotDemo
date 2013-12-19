@@ -55,6 +55,19 @@
 }
 
 -(void)configureHost {
+    // TODO: Consider using autolayout to size the view
+    // 1 - Set up view frame
+    CGRect parentRect = self.view.bounds;
+    CGSize toolbarSize = self.toolbar.bounds.size;
+    parentRect = CGRectMake(parentRect.origin.x,
+                            (parentRect.origin.y + toolbarSize.height),
+                            parentRect.size.width,
+                            (parentRect.size.height - toolbarSize.height));
+    // 2 - Create host view
+    self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc]
+                     initWithFrame:parentRect];
+    self.hostView.allowPinchScaling = NO;
+    [self.view addSubview:self.hostView];
 }
 
 -(void)configureGraph {
