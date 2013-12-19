@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Pie Chart View Controller - First-->
+        <!--Pie Chart View Controller - Pie Chart-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
-                <viewController title="First" id="CZ4-MO-1fc" customClass="CPDPieChartViewController" sceneMemberID="viewController">
+                <viewController title="Pie Chart" id="CZ4-MO-1fc" customClass="CPDPieChartViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QO7-Qs-gw4"/>
                         <viewControllerLayoutGuide type="bottom" id="EPj-zN-d4o"/>
@@ -21,12 +21,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-138"/>
+            <point key="canvasLocation" x="757" y="-558"/>
         </scene>
-        <!--Bar Graph View Controller - Second-->
+        <!--Bar Graph View Controller - Bar Graph-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
-                <viewController title="Second" id="QUy-BD-bpt" customClass="CPDBarGraphViewController" sceneMemberID="viewController">
+                <viewController title="Bar Graph" id="QUy-BD-bpt" customClass="CPDBarGraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hls-nr-h4P"/>
                         <viewControllerLayoutGuide type="bottom" id="7XP-yl-yth"/>
@@ -40,7 +40,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="757" y="186"/>
+        </scene>
+        <!--Scatter Plot View Controller - Scatter Plot-->
+        <scene sceneID="dJs-rz-TS5">
+            <objects>
+                <viewController title="Scatter Plot" id="wr5-Sv-jgU" customClass="CPDScatterPlotViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BEb-Zl-JFo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Omh-V5-5A3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="miC-ZB-EBA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scatter Plot" id="mMK-KT-t3G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzO-fJ-UFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="941"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Vex-rW-GRa">
@@ -55,6 +74,7 @@
                     <connections>
                         <segue destination="CZ4-MO-1fc" kind="relationship" relationship="viewControllers" id="SUk-Ux-ee1"/>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
+                        <segue destination="wr5-Sv-jgU" kind="relationship" relationship="viewControllers" id="zPw-mg-uuk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
