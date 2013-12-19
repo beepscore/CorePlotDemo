@@ -50,6 +50,9 @@
 }
 
 -(void)configureHost {
+    self.hostView = [(CPTGraphHostingView *) [CPTGraphHostingView alloc] initWithFrame:self.view.bounds];
+    self.hostView.allowPinchScaling = YES;
+    [self.view addSubview:self.hostView];
 }
 
 -(void)configureGraph {
