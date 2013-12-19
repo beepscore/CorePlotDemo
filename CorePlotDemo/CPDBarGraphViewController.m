@@ -217,7 +217,57 @@ CGFloat const CPDBarInitialX = 0.25f;
 }
 
 #pragma mark - CPTBarPlotDelegate methods
+/**
+ If user taps a bar, shows annotation with price
+ **/
 -(void)barPlot:(CPTBarPlot *)plot barWasSelectedAtRecordIndex:(NSUInteger)index {
+    // 1 - Is the plot hidden?
+    if (plot.isHidden == YES) {
+        return;
+    }
+    // 2 - Create style, if necessary
+    static CPTMutableTextStyle *style = nil;
+    if (!style) {
+        style = [CPTMutableTextStyle textStyle];
+        style.color= [CPTColor yellowColor];
+        style.fontSize = 16.0f;
+        style.fontName = @"Helvetica-Bold";
+    }
+    // 3 - Create annotation, if necessary
+    NSNumber *price = [self numberForPlot:plot field:CPTBarPlotFieldBarTip recordIndex:index];
+    if (!self.priceAnnotation) {
+        NSNumber *x = [NSNumber numberWithInt:0];
+        NSNumber *y = [NSNumber numberWithInt:0];
+        NSArray *anchorPoint = [NSArray arrayWithObjects:x, y, nil];
+        self.priceAnnotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:plot.plotSpace anchorPlotPoint:anchorPoint];
+    }
+    // 4 - Create number formatter, if needed
+    static NSNumberFormatter *formatter = nil;
+    if (!formatter) {
+        formatter = [[NSNumberFormatter alloc] init];
+        [formatter setMaximumFractionDigits:2];
+    }
+    // 5 - Create text layer for annotation
+    NSString *priceValue = [formatter stringFromNumber:price];
+    CPTTextLayer *textLayer = [[CPTTextLayer alloc] initWithText:priceValue style:style];
+    self.priceAnnotation.contentLayer = textLayer;
+    // 6 - Get plot index based on identifier
+    NSInteger plotIndex = 0;
+    if ([plot.identifier isEqual:CPDTickerSymbolAAPL] == YES) {
+        plotIndex = 0;
+    } else if ([plot.identifier isEqual:CPDTickerSymbolGOOG] == YES) {
+        plotIndex = 1;
+    } else if ([plot.identifier isEqual:CPDTickerSymbolMSFT] == YES) {
+        plotIndex = 2;
+    }
+    // 7 - Get the anchor point for annotation
+    CGFloat x = index + CPDBarInitialX + (plotIndex * CPDBarWidth);
+    NSNumber *anchorX = [NSNumber numberWithFloat:x];
+    CGFloat y = [price floatValue] + 40.0f;
+    NSNumber *anchorY = [NSNumber numberWithFloat:y];
+    self.priceAnnotation.anchorPlotPoint = [NSArray arrayWithObjects:anchorX, anchorY, nil];
+    // 8 - Add the annotation 
+    [plot.graph.plotAreaFrame.plotArea addAnnotation:self.priceAnnotation];
 }
 
 @end
