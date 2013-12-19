@@ -145,7 +145,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     // 3 - Add plots to graph
     CPTGraph *graph = self.hostView.hostedGraph;
     CGFloat barX = CPDBarInitialX;
-    NSArray *plots = [NSArray arrayWithObjects:self.aaplPlot, self.googPlot, self.msftPlot, nil];
+    NSArray *plots = @[self.aaplPlot, self.googPlot, self.msftPlot];
     for (CPTBarPlot *plot in plots) {
         plot.dataSource = self;
         plot.delegate = self;
@@ -257,7 +257,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     if (!self.priceAnnotation) {
         NSNumber *x = [NSNumber numberWithInt:0];
         NSNumber *y = [NSNumber numberWithInt:0];
-        NSArray *anchorPoint = [NSArray arrayWithObjects:x, y, nil];
+        NSArray *anchorPoint = @[x, y];
         self.priceAnnotation = [[CPTPlotSpaceAnnotation alloc] initWithPlotSpace:plot.plotSpace anchorPlotPoint:anchorPoint];
     }
     // 4 - Create number formatter, if needed
@@ -284,7 +284,7 @@ CGFloat const CPDBarInitialX = 0.25f;
     NSNumber *anchorX = [NSNumber numberWithFloat:x];
     CGFloat y = [price floatValue] + 40.0f;
     NSNumber *anchorY = [NSNumber numberWithFloat:y];
-    self.priceAnnotation.anchorPlotPoint = [NSArray arrayWithObjects:anchorX, anchorY, nil];
+    self.priceAnnotation.anchorPlotPoint = @[anchorX, anchorY];
     // 8 - Add the annotation 
     [plot.graph.plotAreaFrame.plotArea addAnnotation:self.priceAnnotation];
 }
