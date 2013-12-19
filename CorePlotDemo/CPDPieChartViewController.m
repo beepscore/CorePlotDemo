@@ -44,6 +44,13 @@
 
 #pragma mark - IBActions
 -(IBAction)themeTapped:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Apply a Theme"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:CPDThemeNameDarkGradient, CPDThemeNamePlainBlack,
+                                  CPDThemeNamePlainWhite, CPDThemeNameSlate, CPDThemeNameStocks, nil];
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
 #pragma mark - Chart behavior
@@ -193,7 +200,28 @@
 }
 
 #pragma mark - UIActionSheetDelegate methods
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+-(void)actionSheet:(UIActionSheet *)actionSheet
+clickedButtonAtIndex:(NSInteger)buttonIndex {
+
+    // 1 - Get title of tapped button
+    NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
+
+    // 2 - Get theme identifier based on user tap
+    NSString *themeName = kCPTPlainWhiteTheme;
+    if ([title isEqualToString:CPDThemeNameDarkGradient] == YES) {
+        themeName = kCPTDarkGradientTheme;
+    } else if ([title isEqualToString:CPDThemeNamePlainBlack] == YES) {
+        themeName = kCPTPlainBlackTheme;
+    } else if ([title isEqualToString:CPDThemeNamePlainWhite] == YES) {
+        themeName = kCPTPlainWhiteTheme;
+    } else if ([title isEqualToString:CPDThemeNameSlate] == YES) {
+        themeName = kCPTSlateTheme;
+    } else if ([title isEqualToString:CPDThemeNameStocks] == YES) {
+        themeName = kCPTStocksTheme;
+    }
+    
+    // 3 - Apply new theme
+    [self.hostView.hostedGraph applyTheme:[CPTTheme themeNamed:themeName]];
 }
 
 @end
