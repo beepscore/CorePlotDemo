@@ -129,6 +129,32 @@ CGFloat const CPDBarInitialX = 0.25f;
 }
 
 -(void)configurePlots {
+    // 1 - Set up the three plots
+    self.aaplPlot = [CPTBarPlot tubularBarPlotWithColor:[CPTColor redColor] horizontalBars:NO];
+    self.aaplPlot.identifier = CPDTickerSymbolAAPL;
+    self.googPlot = [CPTBarPlot tubularBarPlotWithColor:[CPTColor greenColor] horizontalBars:NO];
+    self.googPlot.identifier = CPDTickerSymbolGOOG;
+    self.msftPlot = [CPTBarPlot tubularBarPlotWithColor:[CPTColor blueColor] horizontalBars:NO];
+    self.msftPlot.identifier = CPDTickerSymbolMSFT;
+
+    // 2 - Set up line style
+    CPTMutableLineStyle *barLineStyle = [[CPTMutableLineStyle alloc] init];
+    barLineStyle.lineColor = [CPTColor lightGrayColor];
+    barLineStyle.lineWidth = 0.5;
+
+    // 3 - Add plots to graph
+    CPTGraph *graph = self.hostView.hostedGraph;
+    CGFloat barX = CPDBarInitialX;
+    NSArray *plots = [NSArray arrayWithObjects:self.aaplPlot, self.googPlot, self.msftPlot, nil];
+    for (CPTBarPlot *plot in plots) {
+        plot.dataSource = self;
+        plot.delegate = self;
+        plot.barWidth = CPTDecimalFromDouble(CPDBarWidth);
+        plot.barOffset = CPTDecimalFromDouble(barX);
+        plot.lineStyle = barLineStyle;
+        [graph addPlot:plot toPlotSpace:graph.defaultPlotSpace];
+        barX += CPDBarWidth;
+    }
 }
 
 -(void)configureAxes {
