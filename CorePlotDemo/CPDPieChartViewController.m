@@ -126,6 +126,20 @@
 }
 
 -(void)configureLegend {
+    // 1 - Get graph instance
+    CPTGraph *graph = self.hostView.hostedGraph;
+    // 2 - Create legend
+    CPTLegend *theLegend = [CPTLegend legendWithGraph:graph];
+    // 3 - Configure legend
+    theLegend.numberOfColumns = 1;
+    theLegend.fill = [CPTFill fillWithColor:[CPTColor whiteColor]];
+    theLegend.borderLineStyle = [CPTLineStyle lineStyle];
+    theLegend.cornerRadius = 5.0;
+    // 4 - Add legend to graph
+    graph.legend = theLegend;
+    graph.legendAnchor = CPTRectAnchorRight;
+    CGFloat legendPadding = -(self.view.bounds.size.width / 8);
+    graph.legendDisplacement = CGPointMake(legendPadding, 0.0);
 }
 
 #pragma mark - CPTPlotDataSource methods
@@ -170,8 +184,12 @@
     return [[CPTTextLayer alloc] initWithText:labelValue style:labelText];
 }
 
--(NSString *)legendTitleForPieChart:(CPTPieChart *)pieChart recordIndex:(NSUInteger)index {
-    return @"";
+-(NSString *)legendTitleForPieChart:(CPTPieChart *)pieChart
+                        recordIndex:(NSUInteger)index {
+    if (index < [[[CPDStockPriceStore sharedInstance] tickerSymbols] count]) {
+        return [[[CPDStockPriceStore sharedInstance] tickerSymbols] objectAtIndex:index];
+    }
+    return @"N/A";
 }
 
 #pragma mark - UIActionSheetDelegate methods
