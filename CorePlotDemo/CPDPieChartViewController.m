@@ -7,6 +7,9 @@
 //
 
 #import "CPDPieChartViewController.h"
+#import "CorePlot-CocoaTouch.h"
+#import "CPDConstants.h"
+#import "CPDStockPriceStore.h"
 
 @interface CPDPieChartViewController ()
 

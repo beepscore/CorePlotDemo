@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE1757B01861979700B1C3B3 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1757AD1861979700B1C3B3 /* CPDConstants.m */; };
-		DE1757B11861979700B1C3B3 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1757AF1861979700B1C3B3 /* CPDStockPriceStore.m */; };
 		DE2CE877186153C30095DE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE876186153C30095DE59 /* Foundation.framework */; };
 		DE2CE879186153C30095DE59 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE878186153C30095DE59 /* CoreGraphics.framework */; };
 		DE2CE87B186153C30095DE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE87A186153C30095DE59 /* UIKit.framework */; };
@@ -24,6 +22,10 @@
 		DE2CE89B186153C40095DE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE87A186153C30095DE59 /* UIKit.framework */; };
 		DE2CE8A3186153C40095DE59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE8A1186153C40095DE59 /* InfoPlist.strings */; };
 		DE2CE8A5186153C40095DE59 /* CorePlotDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */; };
+		DEBADDA51862771F005E3283 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA21862771F005E3283 /* CPDConstants.m */; };
+		DEBADDA61862771F005E3283 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA21862771F005E3283 /* CPDConstants.m */; };
+		DEBADDA71862771F005E3283 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */; };
+		DEBADDA81862771F005E3283 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */; };
 		DEBE8E9618626C0D001EECAE /* CPDScatterPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */; };
 		DEDB31DF18618F4B006CF7CA /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */; };
 		DEDB46851861943500680830 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB46841861943500680830 /* QuartzCore.framework */; };
@@ -40,10 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DE1757AC1861979700B1C3B3 /* CPDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDConstants.h; sourceTree = "<group>"; };
-		DE1757AD1861979700B1C3B3 /* CPDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDConstants.m; sourceTree = "<group>"; };
-		DE1757AE1861979700B1C3B3 /* CPDStockPriceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDStockPriceStore.h; sourceTree = "<group>"; };
-		DE1757AF1861979700B1C3B3 /* CPDStockPriceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDStockPriceStore.m; sourceTree = "<group>"; };
 		DE2CE873186153C30095DE59 /* CorePlotDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorePlotDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2CE876186153C30095DE59 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE2CE878186153C30095DE59 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,6 +63,10 @@
 		DE2CE8A0186153C40095DE59 /* CorePlotDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CorePlotDemoTests-Info.plist"; sourceTree = "<group>"; };
 		DE2CE8A2186153C40095DE59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorePlotDemoTests.m; sourceTree = "<group>"; };
+		DEBADDA11862771F005E3283 /* CPDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDConstants.h; sourceTree = "<group>"; };
+		DEBADDA21862771F005E3283 /* CPDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDConstants.m; sourceTree = "<group>"; };
+		DEBADDA31862771F005E3283 /* CPDStockPriceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDStockPriceStore.h; sourceTree = "<group>"; };
+		DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDStockPriceStore.m; sourceTree = "<group>"; };
 		DEBE8E9418626C0D001EECAE /* CPDScatterPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDScatterPlotViewController.h; sourceTree = "<group>"; };
 		DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDScatterPlotViewController.m; sourceTree = "<group>"; };
 		DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "core-plot/build/Debug-iphoneos/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
@@ -97,21 +99,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE1757AB1861979700B1C3B3 /* Starter Files */ = {
-			isa = PBXGroup;
-			children = (
-				DE1757AC1861979700B1C3B3 /* CPDConstants.h */,
-				DE1757AD1861979700B1C3B3 /* CPDConstants.m */,
-				DE1757AE1861979700B1C3B3 /* CPDStockPriceStore.h */,
-				DE1757AF1861979700B1C3B3 /* CPDStockPriceStore.m */,
-			);
-			path = "Starter Files";
-			sourceTree = "<group>";
-		};
 		DE2CE86A186153C30095DE59 = {
 			isa = PBXGroup;
 			children = (
-				DE1757AB1861979700B1C3B3 /* Starter Files */,
 				DE2CE87C186153C30095DE59 /* CorePlotDemo */,
 				DE2CE89E186153C40095DE59 /* CorePlotDemoTests */,
 				DE2CE875186153C30095DE59 /* Frameworks */,
@@ -144,6 +134,7 @@
 		DE2CE87C186153C30095DE59 /* CorePlotDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DEBADDA01862771F005E3283 /* Starter Files */,
 				DE2CE885186153C30095DE59 /* AppDelegate.h */,
 				DE2CE886186153C30095DE59 /* AppDelegate.m */,
 				DE2CE888186153C30095DE59 /* Main.storyboard */,
@@ -186,6 +177,17 @@
 				DE2CE8A1186153C40095DE59 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DEBADDA01862771F005E3283 /* Starter Files */ = {
+			isa = PBXGroup;
+			children = (
+				DEBADDA11862771F005E3283 /* CPDConstants.h */,
+				DEBADDA21862771F005E3283 /* CPDConstants.m */,
+				DEBADDA31862771F005E3283 /* CPDStockPriceStore.h */,
+				DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */,
+			);
+			path = "Starter Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,12 +288,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2CE890186153C30095DE59 /* CPDBarGraphViewController.m in Sources */,
-				DE1757B01861979700B1C3B3 /* CPDConstants.m in Sources */,
-				DE1757B11861979700B1C3B3 /* CPDStockPriceStore.m in Sources */,
 				DE2CE887186153C30095DE59 /* AppDelegate.m in Sources */,
 				DEBE8E9618626C0D001EECAE /* CPDScatterPlotViewController.m in Sources */,
+				DEBADDA71862771F005E3283 /* CPDStockPriceStore.m in Sources */,
 				DE2CE88D186153C30095DE59 /* CPDPieChartViewController.m in Sources */,
 				DE2CE883186153C30095DE59 /* main.m in Sources */,
+				DEBADDA51862771F005E3283 /* CPDConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2CE8A5186153C40095DE59 /* CorePlotDemoTests.m in Sources */,
+				DEBADDA61862771F005E3283 /* CPDConstants.m in Sources */,
+				DEBADDA81862771F005E3283 /* CPDStockPriceStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

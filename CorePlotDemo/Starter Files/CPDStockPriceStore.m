@@ -12,6 +12,7 @@
 //
 
 #import "CPDStockPriceStore.h"
+#import "CPDConstants.h"
 
 @interface CPDStockPriceStore ()
 

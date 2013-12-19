@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
+#import "CPDConstants.h"
+#import "CPDStockPriceStore.h"
 
 @interface CPDScatterPlotViewController : UIViewController
 
