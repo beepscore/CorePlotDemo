@@ -17,7 +17,6 @@
 		DE2CE88D186153C30095DE59 /* CPDPieChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE88C186153C30095DE59 /* CPDPieChartViewController.m */; };
 		DE2CE890186153C30095DE59 /* CPDBarGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE88F186153C30095DE59 /* CPDBarGraphViewController.m */; };
 		DE2CE892186153C30095DE59 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE891186153C30095DE59 /* Images.xcassets */; };
-		DE2CE899186153C30095DE59 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE898186153C30095DE59 /* XCTest.framework */; };
 		DE2CE89A186153C40095DE59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE876186153C30095DE59 /* Foundation.framework */; };
 		DE2CE89B186153C40095DE59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2CE87A186153C30095DE59 /* UIKit.framework */; };
 		DE2CE8A3186153C40095DE59 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE2CE8A1186153C40095DE59 /* InfoPlist.strings */; };
@@ -26,8 +25,8 @@
 		DEBADDA61862771F005E3283 /* CPDConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA21862771F005E3283 /* CPDConstants.m */; };
 		DEBADDA71862771F005E3283 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */; };
 		DEBADDA81862771F005E3283 /* CPDStockPriceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */; };
+		DEBE60951A6F458F002E1B21 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBE60941A6F458F002E1B21 /* libCorePlot-CocoaTouch.a */; };
 		DEBE8E9618626C0D001EECAE /* CPDScatterPlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */; };
-		DEDB31DF18618F4B006CF7CA /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */; };
 		DEDB46851861943500680830 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB46841861943500680830 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +58,6 @@
 		DE2CE88F186153C30095DE59 /* CPDBarGraphViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPDBarGraphViewController.m; sourceTree = "<group>"; };
 		DE2CE891186153C30095DE59 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DE2CE897186153C30095DE59 /* CorePlotDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorePlotDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE2CE898186153C30095DE59 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DE2CE8A0186153C40095DE59 /* CorePlotDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CorePlotDemoTests-Info.plist"; sourceTree = "<group>"; };
 		DE2CE8A2186153C40095DE59 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE2CE8A4186153C40095DE59 /* CorePlotDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CorePlotDemoTests.m; sourceTree = "<group>"; };
@@ -67,9 +65,9 @@
 		DEBADDA21862771F005E3283 /* CPDConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDConstants.m; sourceTree = "<group>"; };
 		DEBADDA31862771F005E3283 /* CPDStockPriceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDStockPriceStore.h; sourceTree = "<group>"; };
 		DEBADDA41862771F005E3283 /* CPDStockPriceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDStockPriceStore.m; sourceTree = "<group>"; };
+		DEBE60941A6F458F002E1B21 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "core-plot-new/framework/../build/Debug-iphoneos/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		DEBE8E9418626C0D001EECAE /* CPDScatterPlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPDScatterPlotViewController.h; sourceTree = "<group>"; };
 		DEBE8E9518626C0D001EECAE /* CPDScatterPlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPDScatterPlotViewController.m; sourceTree = "<group>"; };
-		DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libCorePlot-CocoaTouch.a"; path = "core-plot/build/Debug-iphoneos/libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
 		DEDB46841861943500680830 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -78,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBE60951A6F458F002E1B21 /* libCorePlot-CocoaTouch.a in Frameworks */,
 				DEDB46851861943500680830 /* QuartzCore.framework in Frameworks */,
-				DEDB31DF18618F4B006CF7CA /* libCorePlot-CocoaTouch.a in Frameworks */,
 				DE2CE879186153C30095DE59 /* CoreGraphics.framework in Frameworks */,
 				DE2CE87B186153C30095DE59 /* UIKit.framework in Frameworks */,
 				DE2CE877186153C30095DE59 /* Foundation.framework in Frameworks */,
@@ -90,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE2CE899186153C30095DE59 /* XCTest.framework in Frameworks */,
 				DE2CE89B186153C40095DE59 /* UIKit.framework in Frameworks */,
 				DE2CE89A186153C40095DE59 /* Foundation.framework in Frameworks */,
 			);
@@ -121,12 +118,11 @@
 		DE2CE875186153C30095DE59 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEBE60941A6F458F002E1B21 /* libCorePlot-CocoaTouch.a */,
 				DEDB46841861943500680830 /* QuartzCore.framework */,
-				DEDB31DE18618F4B006CF7CA /* libCorePlot-CocoaTouch.a */,
 				DE2CE876186153C30095DE59 /* Foundation.framework */,
 				DE2CE878186153C30095DE59 /* CoreGraphics.framework */,
 				DE2CE87A186153C30095DE59 /* UIKit.framework */,
-				DE2CE898186153C30095DE59 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -430,6 +426,10 @@
 					"$SRCROOT/core-plot/framework",
 				);
 				INFOPLIST_FILE = "CorePlotDemo/CorePlotDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/core-plot-new/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -451,6 +451,10 @@
 					"$SRCROOT/core-plot/framework",
 				);
 				INFOPLIST_FILE = "CorePlotDemo/CorePlotDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/core-plot-new/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
