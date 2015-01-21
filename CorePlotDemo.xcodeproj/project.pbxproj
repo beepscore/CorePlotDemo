@@ -421,9 +421,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$SRCROOT/core-plot/framework/Source/",
-					"$SRCROOT/core-plot/framework/iPhoneOnly",
-					"$SRCROOT/core-plot/framework",
+					"$SRCROOT/core-plot-new/framework/Source/",
+					"$SRCROOT/core-plot-new/framework/iPhoneOnly",
+					"$SRCROOT/core-plot-new/framework",
 				);
 				INFOPLIST_FILE = "CorePlotDemo/CorePlotDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -446,9 +446,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"$SRCROOT/core-plot/framework/Source/",
-					"$SRCROOT/core-plot/framework/iPhoneOnly",
-					"$SRCROOT/core-plot/framework",
+					"$SRCROOT/core-plot-new/framework/Source/",
+					"$SRCROOT/core-plot-new/framework/iPhoneOnly",
+					"$SRCROOT/core-plot-new/framework",
 				);
 				INFOPLIST_FILE = "CorePlotDemo/CorePlotDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
